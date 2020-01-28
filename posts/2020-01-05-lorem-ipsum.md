@@ -3,7 +3,7 @@ date: 2020-01-05 05:54:23
 title: Lorem Ipsum
 description: And I'm lorem ipsum.
 category: JS
-bacground: "#0f80f3"
+background: "#0f80f3"
 ---
 
 # Lorem ipsum
