@@ -40,21 +40,21 @@ exports.createPages = ({ graphql, actions }) => {
                             title
                         }
                         timeToRead
-                        next {
-                            frontmatter {
-                                title
-                            }
-                            fields {
-                                slug
-                            }
+                    }
+                    next {
+                        frontmatter {
+                            title
                         }
-                        previous {
-                            fields {
-                                slug
-                            }
-                            frontmatter {
-                                title
-                            }
+                        fields {
+                            slug
+                        }
+                    }
+                    previous {
+                        fields {
+                            slug
+                        }
+                        frontmatter {
+                            title
                         }
                     }
                 }
