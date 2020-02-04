@@ -19,7 +19,7 @@ export const SocialLinksLink = styled.a`
   text-decoration: none;
   transition: color 0.5s;
   &:hover {
-    color: var(--highLight);
+    color: var(--highlight);
   }
 `
 

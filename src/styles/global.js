@@ -69,11 +69,11 @@ const GlobalStyles = createGlobalStyle`
     --postColor: #fff;
     --highlight: #1fa1f2;
     --mediumBackground: #192734;
-    --background: var(--background);
+    --background: #16202c;
     --white: #fff;
     --black: #222;
   }
-  body {
+  body.light {
     --borders: #dedede;
     --postColor: #111;
     --texts: #555555;

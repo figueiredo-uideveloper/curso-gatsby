@@ -12,7 +12,7 @@ export const PaginationWrapper = styled.section`
     text-decoration: none;
     transition: color 0.5s;
     &:hover {
-      color: var(--highLight);
+      color: var(--highlight);
     }
   }
 `

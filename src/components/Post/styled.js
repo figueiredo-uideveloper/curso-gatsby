@@ -85,7 +85,7 @@ export const MainContent = styled.section`
   }
   blockquote {
     color: var(--postColor);
-    border-left: 0.3rem solid var(--highLight);
+    border-left: 0.3rem solid var(--highlight);
     padding: 0 1.875rem;
     margin: 3.125rem auto;
   }
@@ -147,8 +147,8 @@ export const MainContent = styled.section`
     margin: 1rem auto !important;
   }
   a {
-    border-bottom: 1px dashed var(--highLight);
-    color: var(--highLight);
+    border-bottom: 1px dashed var(--highlight);
+    color: var(--highlight);
     text-decoration: none;
     transition: opacity 0.5s;
     svg {
