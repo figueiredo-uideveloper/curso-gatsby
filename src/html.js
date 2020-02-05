@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="light">
+      <body {...props.bodyAttributes} className="dark">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -36,12 +36,11 @@ export default function HTML(props) {
                 } catch (err) {}
               }
               setTheme(preferredTheme || 'dark');
-
               window.__onDisplayChange = function() {};
               function setDisplay(newDisplay) {
                 window.__display = newDisplay;
                 preferredDisplay = newDisplay;
-                document.body.className = newDisplay;
+                document.body.id = newDisplay;
                 window.__onDisplayChange(newDisplay);
               }
               var preferredDisplay;
@@ -60,6 +59,9 @@ export default function HTML(props) {
           }}
         />
         {props.preBodyComponents}
+        <noscript key="noscript" id="gatsby-noscript">
+          This app works best with JavaScript enabled.
+        </noscript>
         <div
           key={`body`}
           id="___gatsby"

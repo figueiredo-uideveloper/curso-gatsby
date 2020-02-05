@@ -32,17 +32,15 @@ const MenuBar = () => {
                         <Home />
                     </S.MenuBarItem>
                 </S.MenuBarLink>
-
-                <S.MenuBarLink to="/search" title="Pesquisar">
+                <S.MenuBarLink to="/search/" title="Pesquisar">
                     <S.MenuBarItem>
                         <Search />
                     </S.MenuBarItem>
                 </S.MenuBarLink>
             </S.MenuBarGroup>
-
             <S.MenuBarGroup>
-                <S.MenuBarItem 
-                    title="Mudar tema"
+                <S.MenuBarItem
+                    title="Mudar o tema"
                     onClick={() => {
                         window.__setPreferredTheme(isDarkMode ? "light" : "dark")
                     }}
@@ -50,17 +48,15 @@ const MenuBar = () => {
                 >
                     <Light />
                 </S.MenuBarItem>
-
-                <S.MenuBarItem 
-                    title="Mudar visualização" 
+                <S.MenuBarItem
+                    title="Mudar visualização"
                     onClick={() => {
                         window.__setPreferredDisplay(isListMode ? "grid" : "list")
                     }}
                 >
                     {isListMode ? <Grid /> : <List />}
                 </S.MenuBarItem>
-
-                <S.MenuBarItem title="Ir para o topo">
+                <S.MenuBarItem title="Ir para o Topo">
                     <Arrow />
                 </S.MenuBarItem>
             </S.MenuBarGroup>
