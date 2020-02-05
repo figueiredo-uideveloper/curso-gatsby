@@ -5,17 +5,23 @@ import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Bulb as Light } from "styled-icons/boxicons-regular/Bulb"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
+import { ThList as List } from "styled-icons/typicons/ThList"
 
 import * as S from "./styled"
 
 const MenuBar = () => {
     const [theme, setTheme] = useState(null)
+    const [display, setDisplay] = useState(null)
 
-    const isDark = theme === "dark"
+    const isDarkMode = theme === "dark"
+    const isListMode = display === "list"
 
     useEffect(() => {
         setTheme(window.__theme)
+        setDisplay(window.__display)
+
         window.__onThemeChange = () => setTheme(window.__theme)
+        window.__onDisplayChange = () => setDisplay(window.__display)
     }, [])
 
     return (
@@ -38,15 +44,20 @@ const MenuBar = () => {
                 <S.MenuBarItem 
                     title="Mudar tema"
                     onClick={() => {
-                        window.__setPreferredTheme(isDark ? "light" : "dark")
+                        window.__setPreferredTheme(isDarkMode ? "light" : "dark")
                     }}
                     className={theme}
                 >
                     <Light />
                 </S.MenuBarItem>
 
-                <S.MenuBarItem title="Mudar visualização">
-                    <Grid />
+                <S.MenuBarItem 
+                    title="Mudar visualização" 
+                    onClick={() => {
+                        window.__setPreferredDisplay(isListMode ? "grid" : "list")
+                    }}
+                >
+                    {isListMode ? <Grid /> : <List />}
                 </S.MenuBarItem>
 
                 <S.MenuBarItem title="Ir para o topo">
